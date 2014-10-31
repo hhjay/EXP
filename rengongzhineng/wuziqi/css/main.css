@@ -1,0 +1,119 @@
+	.wrapper {
+	width: 600px;
+	position: relative;
+}
+
+/* 棋盘 */
+.chessboard {
+	margin: 30px 0 0 50px;
+	width: 542px;
+	background: url(../images/chessboard.png) no-repeat 14px 14px rgb(250, 
+
+250, 250);
+	overflow: hidden;
+	box-shadow: 2px 2px 8px #888;
+	-webkit-box-shadow: 2px 2px 8px #888;
+	-moz-box-shadow: 2px 2px 8px #888;
+}
+
+div.chessboard div {
+	float: left;
+	width: 36px;
+	height: 36px;
+	border-top: 0px solid #ccc;
+	border-left: 0px solid #ccc;
+	border-right: 0;
+	border-bottom: 0;
+	cursor: pointer;
+}
+
+/* 棋子 */
+div.chessboard div.black {
+	background: url(../images/black.png) no-repeat 4px 4px;
+}
+div.chessboard div.white {
+	background: url(../images/white.png) no-repeat 4px 4px;
+}
+div.chessboard div.hover {
+	background: url(../images/hover.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-up {
+	background: url(../images/hover_up.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-down {
+	background: url(../images/hover_down.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-up-left {
+	background: url(../images/hover_up_left.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-up-right {
+	background: url(../images/hover_up_right.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-left {
+	background: url(../images/hover_left.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-right {
+	background: url(../images/hover_right.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-down-left {
+	background: url(../images/hover_down_left.png) no-repeat 1px 1px;
+}
+div.chessboard div.hover-down-right {
+	background: url(../images/hover_down_right.png) no-repeat 1px 1px;
+}
+div.chessboard div.white-last {
+	background: url(../images/white_last.png) no-repeat 4px 4px;
+}
+div.chessboard div.black-last {
+	background: url(../images/black_last.png) no-repeat 4px 4px;
+}
+
+/* 右侧 */
+
+div.operating-panel {
+	position: absolute;
+	left: 610px;
+	top: 150px;
+	width: 200px;
+	text-align: center;
+}
+
+.operating-panel a {
+	display: inline-block;
+	padding: 10px 15px;
+	margin-bottom: 39px;
+	margin-right: 8px;
+	margin-left: 8px;
+	background: rgb(100, 167, 233);
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "微软雅黑", "宋体";
+}
+
+.operating-panel a:hover {
+	background: rgb(48, 148, 247);
+	text-decoration: none;
+}
+
+.operating-panel a.disable, .operating-panel a.disable:hover {
+	cursor: default;
+	background: rgb(197, 203, 209);
+	color: rgb(130, 139, 148);
+}
+
+.operating-panel a.selected {
+	border: 5px solid #F3C242;
+	padding: 5px 10px;
+}
+
+#result_tips {
+	color: #CE4242;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+
+#result_info {
+	margin-bottom: 26px;
+}

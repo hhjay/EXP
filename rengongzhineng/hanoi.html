@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hanoi</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body >
+<script type="text/javascript">
+	var hanoi = function (disc, src, aux, dst) {
+    	if (disc > 0) {
+    	    hanoi(disc - 1, src, dst, aux);
+    	    document.writeln('移动<b> ' + disc +
+    	            ' </b>从 ' + src + ' 到 ' + dst + "<br />");
+    	    hanoi(disc - 1, aux, src, dst);
+    	}
+	}
+	hanoi(3, 'A', 'B', 'C');
+</script>
+</body>
+</html>
