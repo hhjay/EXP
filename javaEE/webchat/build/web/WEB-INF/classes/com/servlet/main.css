@@ -1,0 +1,50 @@
+body{margin:0px;padding: 0px;background: #6B747A;font-family: sans-serif;}
+.main{
+	width: 960px;
+	height: 640px;
+	margin: 0px auto;
+}
+.online{
+	width: 278px;
+	height: 500px;
+	margin-top: 20px;
+	background: #ccc;
+	float: left;
+}
+.online p{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.num{
+	font-size: 15px;
+	font-weight: bold;
+}
+.con{
+	width: 650px;
+	height: 600px;
+	margin-top: 20px;
+	float: right;
+}
+.out h5{
+	width: 100%;
+	height: 40px;
+	margin: 0px;
+	line-height: 40px;
+	font-size: 18px;
+	text-indent: 2em;
+	border-radius: 10px 10px 0px 0px;
+	background: #6B7888;
+}
+.outText{
+	width: 644px;
+	height: 400px;
+}
+.inText{
+	width: 585px;
+	height: 30px;
+}
+.sub{
+	width: 50px;
+	height: 30px;
+}

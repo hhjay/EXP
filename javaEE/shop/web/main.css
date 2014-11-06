@@ -1,0 +1,21 @@
+table{border: none;}
+.main{
+	width: 960px;
+	height: 500px;
+	margin: 30px auto;
+}
+.main form,.form{
+	width: 500px;
+	height: 300px;
+	/*color: #fff;*/
+	background: url(images/car.jpg)no-repeat;
+	background-size: 500px 300px;
+}
+.btn{
+	width: 100px;
+	height: 30px;
+	background: #D21818;
+	border:none;
+	float: left;
+	margin-left: 200px;
+}
