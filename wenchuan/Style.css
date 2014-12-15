@@ -1,0 +1,72 @@
+body{font-size:14px;margin: 0px;}
+td{
+	font-size: px;
+	text-decoration: none;
+	line-height: 22px;
+}
+a:link {font-size: ;color: #333;text-decoration:none;}
+a:visited {font-size: 14px;color: #333;text-decoration:none;}
+a:hover {font-size: px;color: #333333;text-decoration: none;}
+a:active {font-size: px;color: #333;text-decoration:inherit;}
+.Top03{ font-size:14px; line-height:100%; color:#0A2C52; text-decoration:none;}
+.Top03:link {font-size: 14px;color: #0A2C52;text-decoration:none;}
+.Top03:visited {font-size: 14px;color: #0A2C52;text-decoration:none;}
+.Top03:hover {font-size: 14px;color: #0A2C52;text-decoration: underline;}
+.Top03:active {font-size: 14px;color: #0A2C52;text-decoration:none;}
+.Top04{ font-size: 14px;line-height:100%; color:#ffffff;}
+.Top04 a:link {font-size: 14px;color: #ffffff;text-decoration:none;}
+.Top04 a:visited {font-size: 14px;color: #ffffff;text-decoration:none;}
+.Top04 a:hover {font-size: 14px;color: #ffffff;text-decoration: underline;}
+.Top04 a:active {font-size: 14px;color: #ffffff;text-decoration:none;}
+img{ border:0px;}
+#body01{ background: #ffffff url("bg.jpg") repeat-x left top; height:400px; padding-top:10px; text-align:center;}
+
+.body03{ margin:auto 5px; font-size: 14px; line-height:150%; color: #90a5b7;text-decoration:none;}
+.body03:link {font-size: 14px;color: #FFFFFF;text-decoration:none;}
+.body03:visited {font-size: 14px;color: #FFFFFF;text-decoration:none;}
+.body03:hover {font-size: 14px;color: #f98e00;text-decoration: underline;}
+.body03:active {font-size: 14px;color: #FFFFFF;text-decoration:none;}
+
+.footlink{font-size: 14px;color: #0A2C52;text-decoration:none;}
+.footlink a:link {font-size: 14px;color: #0A2C52;text-decoration:none;}
+.footlink a:visited {font-size: 14px;color: #0A2C52;text-decoration:none;}
+.footlink a:hover { font-size: 14px;color: #333333;text-decoration: none;}
+.footlink a:active { font-size: 14px;color: #0A2C52;text-decoration:none;}
+
+#foot01{ font-size:14px; color:#FFF; line-height:180%;}
+
+.btn{ border:inset 1px #666;}
+.a12
+{
+	margin:5px 3px;}
+.topmenu {
+	FONT-SIZE: 14px;
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.zi14{
+	font-size: 14px;
+	line-height: 24px;
+	color: #666666;
+	text-decoration: none;
+}
+.classbox {
+	border: 1px solid #f0f0ef;
+}
+.timu{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #274F72;
+}
+
+.ZI30GAO {
+	line-height: 29px;
+}
+/*--swf--*/
+.colPic{ text-align:center; margin:0 auto; width:1204px; height:140px; position:absolute;}
+.objShell{ text-align:center; margin:0 auto; width:1204px; height:140px; position:relative;}
+
+

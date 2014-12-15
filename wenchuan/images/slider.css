@@ -1,0 +1,21 @@
+#slider {
+	Z-INDEX: 1; POSITION: absolute
+}
+#slides {
+	Z-INDEX: 1; POSITION: relative; WIDTH: 960px; DISPLAY: block; HEIGHT: 300px; OVERFLOW: hidden
+}
+#slides IMG {
+	BORDER-RIGHT-WIDTH: 0px; WIDTH: 960px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 300px; BORDER-LEFT-WIDTH: 0px
+}
+#slidepagination {
+	Z-INDEX: 10; POSITION: absolute; LIST-STYLE-TYPE: none; HEIGHT: 25px; RIGHT: 10px; TOP: 245px
+}
+#slidepagination LI {
+	TEXT-INDENT: -100px; MARGIN: 0px 4px 0px 0px; WIDTH: 10px; BACKGROUND: url(../images/dot.png) no-repeat center 50%; FLOAT: left; HEIGHT: 15px; OVERFLOW: hidden; CURSOR: pointer
+}
+#slidepagination LI:hover {
+	BACKGROUND: url(../images/dotcurr.png) no-repeat center 50%
+}
+#slidepagination LI.current {
+	BACKGROUND: url(../images/dotcurr.png) no-repeat center 50%
+}

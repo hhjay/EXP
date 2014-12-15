@@ -1,0 +1,49 @@
+#zytz{
+	width: 150px;
+	height: 50px;
+	background: #aaa;
+	position: fixed;
+	top:50px;
+	display: none;
+}
+
+#hhjFloat{
+	width: 199px;
+	height: 218px;
+	position: fixed;
+	bottom: 50px;
+	background: url(../images/inform.png)no-repeat;
+	
+}
+.floatTitle{
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin: 11px 10px 0px 0px;
+	cursor: pointer;
+}
+#floatBody{
+	width: 185px;
+	height: 170px;
+	overflow: hidden;
+}
+#floatBody span{
+	width: 60%;
+	height: 17px;
+	float: left;
+	margin-left: 11%;
+	color: #0067a1;
+	font-size: 15px;
+	border-bottom: 1px solid #91a7ce;
+}
+.floatLink{
+	width: 90%;
+	height: 145px;
+	float: left;
+	margin-left: 10%;
+	margin-top: 2px;
+}
+.floatLink a:hover{
+	text-decoration: underline;
+	color: #36a7bf;
+}

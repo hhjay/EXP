@@ -1,0 +1,97 @@
+@import url( lib/reset.css );
+BODY {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #eae9e1; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Tahoma, Verdana, Arial; COLOR: #666666; PADDING-TOP: 0px
+}
+TD {
+	LINE-HEIGHT: 20px; FONT-SIZE: 14px
+}
+A {
+	BORDER-BOTTOM: #bbb 1px dotted; PADDING-BOTTOM: 1px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #666; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A:hover {
+	BORDER-BOTTOM: #fff 1px solid
+}
+A.img {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+A.img:hover {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+P {
+	LINE-HEIGHT: 21px; MARGIN-BOTTOM: 21px; FONT-SIZE: 13px
+}
+UL {
+	LINE-HEIGHT: 21px; MARGIN-BOTTOM: 21px; FONT-SIZE: 13px
+}
+#menu {
+	WIDTH: 940px; FONT-FAMILY: "Microsoft YaHei"; HEIGHT: 35px; COLOR: #fff; CLEAR: both; FONT-SIZE: 14px
+}
+#menu TD A {
+	BORDER-BOTTOM: #ff3300 0px dotted; LINE-HEIGHT: 35px; DISPLAY: block; FONT-FAMILY: "ËÎÌו"; HEIGHT: 35px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#menu TD A:hover {
+	BORDER-BOTTOM: #ff3300 0px dotted; BACKGROUND-COLOR: #004D48; COLOR: #FFFFFF; FONT-WEIGHT: normal
+}
+#menu TD {
+	TEXT-ALIGN: center
+}
+#tttop {
+	COLOR: #aeada8
+}
+#tttop A {
+	TEXT-ALIGN: center; WIDTH: 120px; DISPLAY: block; BORDER-BOTTOM-WIDTH: 0px; COLOR: #aeada8
+}
+#tttop A:hover {
+	BACKGROUND-COLOR: #616059; COLOR: #fff
+}
+#annarea {
+	COLOR: #dfdfdf
+}
+#annarea A {
+	COLOR: #dfdfdf
+}
+#annarea A:hover {
+	COLOR: #fff
+}
+.bottomtdborder2 {
+	BORDER-BOTTOM: #f5f5f5 1px dashed; BACKGROUND: url(../images/before.gif) no-repeat 50% 50%
+}
+.title1 {
+	BACKGROUND-IMAGE: url(../images/titlebg.gif); LINE-HEIGHT: 39px; TEXT-INDENT: 20px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "Microsoft YaHei"; BACKGROUND-POSITION: 50% top; HEIGHT: 39px; COLOR: #7f3735; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.title2 {
+	LINE-HEIGHT: 39px; TEXT-INDENT: 0px; FONT-FAMILY: "Microsoft YaHei"; HEIGHT: 39px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.redtoptd {
+	BORDER-TOP: #bbb 1px dotted
+}
+H1 {
+	LINE-HEIGHT: 30px; FONT-FAMILY: "Microsoft YaHei","ËÎÌו",arial; COLOR: #c40000; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.font1 {
+	BACKGROUND-IMAGE: url(../images/LotusFormsTurbo_icon_16.gif); TEXT-INDENT: 20px; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: "Microsoft YaHei"; BACKGROUND-POSITION: 9px 50%; COLOR: #c40000; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.newsDownList {
+	FONT-FAMILY: "Microsoft YaHei"; BACKGROUND: #de0500; COLOR: #ffffff; FONT-SIZE: 14px
+}
+SELECT {
+	FONT-FAMILY: "Microsoft YaHei"; BACKGROUND: #de0500; COLOR: #ffffff; FONT-SIZE: 14px
+}
+H2 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "ËÎÌו","Microsoft Yahei"; COLOR: #f9edeb; FONT-SIZE: 28px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Georgia, "Times New Roman", Times, serif; COLOR: #b66f66; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+#copyright {
+	COLOR: #bebeb6
+}
+#copyright A {
+	COLOR: #bebeb6
+}
+#maincontentbox {
+	BORDER-LEFT: #dfded6 1px solid; BACKGROUND-COLOR: #fdfcf1; BORDER-RIGHT: #dfded6 1px solid
+}
+#pagetop {
+	BACKGROUND-IMAGE: url(../images/tb.gif); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: right top
+}
