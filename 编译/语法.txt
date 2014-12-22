@@ -1,0 +1,308 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+#include<malloc.h>
+
+ 
+
+#define READ(ch) ch=getc(fp)     /*宏：READ(ch)*/
+
+ 
+
+char         ch;                               /*声明为全局变量*/
+
+int            right=0;          
+
+FILE       *fp;
+
+ 
+
+typedef struct struCH{
+
+       char              ch;
+
+       struct      struCH *next;
+
+}struCH;
+struCH *temp,*head,*shift;
+/*head指向字符线性链表的头结点*/
+
+/*shift指向动态建成的结点(游标)*/
+
+ void E ();        /* P(E) */
+
+       void E1();       /* P(E')*/
+
+       void T ();        /* P(T) */
+
+       void T1();       /* P(T')*/
+
+       void F ();        /* P(F) */
+
+
+void main(int argc,char *argv[]){
+
+       
+       
+
+       int errnum=0,k=0,m=0,countchar=0,rownum;
+
+       int charerr=0;  /*开关控制量*/
+
+       
+
+       /************************以只读方式打开文件*********************/         
+
+       if((fp=fopen("main.txt","r"))==NULL)            
+
+       {
+
+              printf("\n\tCan not open file %s,or not exist it!\n");
+
+              exit(0);      /*文件不存在or打不开时，正常退出程序*/
+
+       }
+
+       else printf("\n\tSuccess open file: %s\n");       /*成功打开文件*/
+
+              
+
+       /******************遍历整个文件检测是否有非法字符********************/
+
+       
+
+       /*如果用while(!feof(fp))语言，将会多出一个字符
+
+        *所以这里采用以下方法遍历整个文件检测其否有非法字符
+
+*/   
+
+       /*[1]计算文件中字符数量*/
+
+       while(!feof(fp)){
+
+              READ(ch);                   /*这里读取字符只是让文件指针往前移*/
+
+              countchar++;                /*统计文件中的字符数(包括换行符及文件结束符)*/
+
+       }
+
+       rewind(fp);                /*将fp文件指针重新指向文件头处，以备后面对文件的操作*/
+
+       if(countchar==0){                /*空文件*/
+
+              printf("\t%s is a blank file!\n"); 
+
+              exit(0);                         /*正常退出本程序*/
+
+       }     
+
+       /*[2]开始遍历文件*/
+
+       while(k<(countchar-1)){      /*加换行符后countchar仍多了一个，不知为何*/
+
+              ch=getc(fp);           
+
+              if(!(ch=='('||ch==')'||ch=='i'||ch=='+'||ch=='-'||ch=='*'||ch=='/'||ch=='#'||ch=='\n')){
+
+                     charerr=1;errnum++;      /*charerror出错标记，errnum统计出错个数*/
+
+              }
+
+              k++;       
+
+       }
+
+       rewind(fp);            /*将fp文件指针重新指向文件头处，以备后面的建链表操作*/
+
+       if(charerr==1){      /*文件中有非法字符*/
+
+              printf("\n\t%d Unindentify characters in file yufafenxi \n",errnum);
+
+              exit(0);           /*正常退出本程序*/
+
+       }
+
+       
+
+       /*******************非空且无非法字符，则进行识别操作*****************/
+
+       for(rownum=1;m<(countchar-1);rownum++){    /*识别所有行,rownum记录行号*/
+
+              /*初始变量及堆栈和*/
+
+              right=1;
+
+              /*初始存放待识别的表达式的线性链表头*/
+
+              shift=(struCH *)malloc(sizeof(struCH));/**/
+
+              shift->next=NULL;
+
+              head=shift;
+
+              
+
+              /*读取一行形成线性链表*/
+
+              READ(ch);putchar(ch);m++;
+
+              while(ch!='\n'&&m<(countchar)){ /*行末or到文件尾。最后会读取文件结束符*/
+
+                     /*读取ch,读取存入结点，这样每行便形成一个线性链表*/
+
+                     temp=(struCH *)malloc(sizeof(struCH));
+
+                     temp->ch=ch;
+
+                     temp->next=NULL;
+
+                     shift->next=temp;
+
+                     shift=shift->next;
+
+                     READ(ch);
+
+                     if(m!=(countchar-1)) putchar(ch);  /*不输出最后一次读取的文件结束符*/
+
+                     m++;
+
+              }
+
+              head=head->next;         /*消去第一个空头结点,并使head指向非空线性链表头*/
+
+              shift=head;                           /*shift指向头结点，以便后面识别操作*/
+
+              putchar('\n');
+
+              E();                                      /*开始识别一行*/                
+
+              if(shift->ch=='#'&&right)      /*正确提示:[文件名] Line [行号]:right expression!*/
+
+                     printf("yufafenxi  Line %d:\t right expression!\n",rownum);
+
+              else                                      /*错误提示:[文件名] Line [行号]:error expression!*/
+
+                     printf("yufafenxi  Line %d:\t error expression!\n",rownum);  
+
+              putchar('\n');
+
+       }/*end for*/
+
+       printf("Completed!\n");
+
+       fclose(fp);      /*关闭文件*/
+
+       exit(0);           /*正常结束程序*/
+
+}
+
+ 
+
+/*以下函数分别对应于子模块程序*/ 
+
+ 
+
+void E(){
+
+       T();
+
+       E1();
+
+}
+
+ 
+
+void E1(){
+
+       if(shift->ch=='+'||shift->ch=='-'){
+
+              shift=shift->next;
+
+              T();
+
+              E1();
+
+       }
+
+       else{
+
+              if(shift->ch=='#'||shift->ch==')')
+
+                     return;
+
+              else
+
+                     right=0;
+
+       }
+
+}
+
+ 
+
+void T(void){
+
+              F();
+
+              T1();
+
+}
+
+ 
+
+void T1(void){
+
+       if(shift->ch=='*'||shift->ch=='/'){
+
+              shift=shift->next;
+
+              F();
+
+              T1();
+
+       }
+
+       else{
+
+              if(shift->ch!='#'&&shift->ch!=')'&&shift->ch!='+'&&shift->ch!='-')
+
+                     right=0;   /*如果不是'#'or')'or'+'or'+'or'-'则出错*/
+
+       }
+
+}
+
+ 
+
+void F(void){
+
+       if(shift->ch=='i')
+
+              shift=shift->next;
+
+       else{
+
+              if(shift->ch=='('){
+
+                     shift=shift->next;
+
+                     E();
+
+                     if(shift->ch==')')
+
+                            shift=shift->next;
+
+                     else
+
+                            right=0;
+
+              }
+
+              else
+
+                     right=0;
+
+       }
+
+}
